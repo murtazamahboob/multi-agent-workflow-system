@@ -1,0 +1,6 @@
+# Pinned runtime dependencies (verified working with Python 3.10+).
+# The system is stdlib-only — no LLM API key, no network, no framework.
+# (No runtime dependencies.)
+
+# Dev / test dependency (also in pyproject.toml [project.optional-dependencies] dev).
+pytest==9.2.0
