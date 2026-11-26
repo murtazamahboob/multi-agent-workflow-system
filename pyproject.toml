@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-workflow-system"
+version = "1.0.0"
+description = "Multi-agent workflow system: Planner, Researcher, Analyst, Writer and Reviewer agents with typed shared state, an evidence graph, a 30-task eval scoreboard, a cost-aware model router, replay/branch, human approvals and a skill library — offline, deterministic, plain Python."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Murtaza Mahboob" }]
+keywords = [
+    "multi-agent",
+    "workflow-automation",
+    "evidence-graph",
+    "evaluation",
+    "cost-aware-routing",
+    "offline-ai",
+    "python",
+    "research-automation",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[project.scripts]
+maws = "workflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
